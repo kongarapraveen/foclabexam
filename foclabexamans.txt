@@ -1,0 +1,1396 @@
+1. Generation of number series 1, 2, 3, 4,.....n
+2.Generation of even number series 2, 4, 6,.....n
+3.Generation of ODD number series 1, 3, 5, .....n
+4.Generation of Fibonacci series 0, 1, 1, 2, 3, 5, 8, .....n  
+5. Summing up series 1+2+3+4..... +n 
+6. Summing up Even Number series 
+7. Summing up Odd Number series 
+8. Summing up 1-2+3-4+5.... N 
+9. Summing up 12+22+32 +42..... +n 
+10. Summing up 22+42+62 +82 + 
+11. Summing up 1'+22+33+4++ n" 
+12. summing up squares of odd numbers
+13.Summing up cubes of n numbers
+14. Product series (Factorial of a given number) 
+15. Finding given number is Armstrong or not 
+16. Summing up any n numbers and finding average 
+17. Printing digits of an integer number
+18. Summing up the digits of an integer number 
+19. Revering the digits of an integer number 
+20. Finding whether the given integer is odd or even 
+21. Finding the given integer is positive or negative 
+22.Swapping two numbers with a temporary variable 
+23. Swapping two numbers without a temporary variable 
+24. Swap 3 numbers a to b, b to c and c to a
+25. Finding the biggest out of 2 integer numbers 
+26. Finding the biggest out of n integers
+27. Sine series [sin(x) = x - x3/3!+x/5! -x7/7!......]
+28. Cos series [cos(x) = 1-x2/2!+x+/4! - x°/6!
+]
+29. Exponential series [el = 1-x/1!+x2/2!-x3/3! + x/4! .]
+30.
+Linear Search
+
+
+
+
+
+
+
+1. Generation of number series 1, 2, 3, 4,…..
+
+
+#include <stdio.h>
+int main() {
+ int n, i;
+ printf("Enter the value of n: ");
+ scanf("%d", &n);
+ printf("Number series: ");
+ for (i = 1; i <= n; i++) {
+ printf("%d ", i);
+ }
+ return 0;
+}
+
+
+
+
+2. Generation of even number series 2, 4, 6, …..n
+
+#include <stdio.h>
+int main() {
+ int n, i;
+ printf("Enter the value of n: ");
+ scanf("%d", &n);
+ printf("Even number series: ");
+ for (i = 2; i <= n; i += 2) {
+ printf("%d ", i);
+ }
+ return 0;
+}
+
+
+
+3. Generation of ODD number series 1, 3, 5, …..
+
+
+
+#include <stdio.h>
+int main() {
+ int n, i;
+ printf("Enter the value of n: ");
+ scanf("%d", &n);
+ printf("Odd number series: ");
+ for (i = 1; i <= n; i += 2) {
+ printf("%d ", i);
+ }
+ return 0;
+}
+
+
+
+
+
+4. Generation of Fibonacci series 0, 1, 1, 2, 3, 5, 8, …..n
+
+
+
+#include <stdio.h>
+int main() {
+ int n, a, b, next;
+ printf("Enter the value of n: ");
+ scanf("%d", &n);
+ printf("Fibonacci series: ");
+ printf("0 1 "); // Print the initial values
+ a = 0;
+ b = 1;
+ next = a + b;
+ while (next <= n) {
+ printf("%d ", next);
+ a = b;
+ b = next;
+ next = a + b;
+ }
+ return 0;
+}
+
+
+
+5. Summing up series 1 + 2 + 3 + 4….. +
+
+
+#include <stdio.h>
+int main() {
+ int n, i, sum = 0;
+ printf("Enter the value of n: ");
+ scanf("%d", &n);
+ for (i = 1; i <= n; i++) {
+ sum += i;
+ }
+ printf("Sum of the series: %d\n", sum);
+ return 0;
+}
+
+
+
+
+
+
+
+6. Summing up Even Number series
+
+
+#include <stdio.h>
+int main() {
+ int n, i, sum = 0;
+ printf("Enter the value of n: ");
+ scanf("%d", &n);
+ for (i = 2; i <= n; i += 2) {
+ sum += i;
+ }
+ printf("Sum of the even number series: %d\n", sum);
+ return 0;
+}
+
+
+
+
+
+
+7. Summing up Odd Number series
+
+
+#include <stdio.h>
+int main() {
+ int n, i, sum = 0;
+ printf("Enter the value of n: ");
+ scanf("%d", &n);
+ for (i = 1; i <= n; i += 2) {
+ sum += i;
+ }
+ printf("Sum of the odd number series: %d\n", sum);
+ return 0;
+}
+
+
+
+
+
+
+Experiment 8
+Summing up 1 – 2 + 3 – 4 + 5…. N
+
+
+
+
+#include <stdio.h>
+int main() {
+ int N, i, sum = 0, sign = 1;
+ printf("Enter the value of N: ");
+ scanf("%d", &N);
+ for (i = 1; i <= N; i++) {
+ if (i % 2 == 0) {
+ sum -= i;
+ } else {
+ sum += i;
+ }
+ sign *= -1;
+ }
+ printf("Sum of the series: %d\n", sum);
+ return 0;
+}
+
+
+
+
+
+
+Experiment 9
+Summing up 12 + 22 + 32 + 42….. +n
+
+
+#include <stdio.h>
+int main() {
+ int N, i, sum = 0;
+ printf("Enter the value of N: ");
+ scanf("%d", &N);
+ for (i = 1; i <= N; i++) {
+ int term = i * i;
+ sum += term;
+ }
+ printf("Sum of the series: %d\n", sum);
+ return 0;
+}
+
+
+
+
+Experiment 10
+Summing up 22 + 42 + 62 + 82 + ….. n2
+
+
+
+#include <stdio.h>
+int main() {
+ int n, i, sum = 0;
+ printf("Enter the value of n: ");
+ scanf("%d", &n);
+ for (i = 2; i <= n; i += 2) {
+ int term = i * i;
+ sum += term;
+ }
+ printf("Sum of the series: %d\n", sum);
+ return 0;
+}
+
+
+
+
+
+Experiment 11
+Summing up 11+22+33+44+ …. nn
+
+
+
+#include <stdio.h>
+#include <math.h>
+int main() {
+ int n, i;
+ long long sum = 0;
+ printf("Enter the value of n: ");
+ scanf("%d", &n);
+ for (i = 1; i <= n; i++) {
+ long long term = pow(i, i);
+ sum += term;
+ }
+ printf("Sum of the series: %lld\n", sum);
+ return 0;
+}
+
+
+
+
+
+Experiment 12
+Summing up squares of Odd numbers
+
+
+
+#include <stdio.h>
+int main() {
+ int n, sum = 0;
+ printf("Enter the value of n: ");
+ scanf("%d", &n);
+ for (int i = 1; i <= n; i++) {
+ if (i % 2 != 0) {
+ sum += (i * i);
+ }
+ }
+ printf("Sum of squares of odd numbers: %d\n", sum);
+ return 0;
+}
+
+
+
+
+Experiment 13
+Summing up cubes of n numbers
+
+
+
+#include <stdio.h>
+int main() {
+ int n, i, cube, sum = 0;
+ printf("Enter the value of n: ");
+ scanf("%d", &n);
+ for (i = 1; i <= n; i++) {
+ cube = i * i * i;
+ sum += cube;
+ }
+ printf("Sum of cubes of numbers from 1 to %d is: %d
+}
+
+
+
+
+
+Experiment 14
+Product series (Factorial of a given number
+
+
+
+
+#include <stdio.h>
+int main() {
+ int n;
+ printf("Enter a number: ");
+ scanf("%d", &n);
+ int product = 1;
+ int i;
+ for (i = 1; i <= n; i++) {
+ product *= i;
+ }
+ printf("Product series: %d\n", product);
+ return 0;
+
+
+
+
+
+
+Experiment 15
+Finding given number is Armstrong or not
+
+
+
+#include <stdio.h>
+#include <math.h>
+int main() {
+ int number, originalNumber, remainder, result = 0, n = 0;
+ printf("Enter a number: ");
+ scanf("%d", &number);
+ originalNumber = number;
+ // Calculate the number of digits
+ while (originalNumber != 0) {
+ originalNumber /= 10;
+ ++n;
+ }
+ originalNumber = number;
+ // Calculate the sum of cubes of digits
+ while (originalNumber != 0) {
+ remainder = originalNumber % 10;
+ result += pow(remainder, n);
+ originalNumber /= 10;
+ }
+ // Check if the result is equal to the original number
+ if (result == number) {
+ printf("%d is an Armstrong number.\n", number);
+ } else {
+ printf("%d is not an Armstrong number.\n", number);
+ }
+ return 0;
+}
+
+
+
+
+
+Experiment 16
+Summing up any n numbers and finding average
+
+
+
+#include <stdio.h>
+int main() {
+ int n, num, sum = 0;
+ float average;
+ printf("Enter the value of n: ");
+ scanf("%d", &n);
+ for (int i = 1; i <= n; i++) {
+ printf("Enter number %d: ", i);
+ scanf("%d", &num);
+ sum += num;
+ }
+ average = (float) sum / n;
+ printf("Sum = %d\n", sum);
+ printf("Average = %.2f\n", average);
+ return 0;
+}
+
+
+
+
+
+
+
+Experiment 17
+Printing digits of an integer numbe
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+void printDigits(int num) {
+ int digit;
+ num = abs(num); // Get the absolute value of the input number
+ while (num > 0) {
+ digit = num % 10;
+ printf("%d ", digit);
+ num = num / 10;
+ }
+}
+int main() {
+ int number;
+ printf("Enter an integer number: ");
+ scanf("%d", &number);
+ printf("Printing digits of the number: ");
+ printDigits(number);
+ return 0;
+ }
+
+
+
+
+
+
+
+
+Experiment 18
+Summing up the digits of an integer number
+
+
+
+
+#include <stdio.h>
+int main() {
+ int number, digit, sum = 0;
+ printf("Enter an integer number: ");
+ scanf("%d", &number);
+ while (number != 0) {
+ digit = number % 10;
+ sum += digit;
+ number /= 10;
+ }
+ printf("Sum of the digits: %d\n", sum);
+ return 0;
+}
+
+
+
+
+Experiment 19
+Revering the digits of an integer number
+
+
+
+#include <stdio.h>
+int main() {
+ int number, remainder, reverse = 0;
+ printf("Enter an integer number: ");
+ scanf("%d", &number);
+ while (number != 0) {
+ remainder = number % 10;
+ reverse = reverse * 10 + remainder;
+ number /= 10;
+ }
+ printf("Reversed number: %d\n", reverse);
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+Experiment 20
+Finding whether the given integer is odd or even
+
+
+
+#include <stdio.h>
+int main() {
+ int number;
+ printf("Enter an integer number: ");
+ scanf("%d", &number);
+ if (number % 2 == 0) {
+ printf("%d is an even number.\n", number);
+ } else {
+ printf("%d is an odd number.\n", number);
+ }
+ return 0;
+}
+
+
+
+
+
+Experiment 21
+Finding the given integer is positive or negative
+
+
+#include <stdio.h>
+int main() {
+ int num;
+ printf("Enter an integer: ");
+ scanf("%d", &num);
+ if (num > 0) {
+ printf("The number is positive.\n");
+ } else if (num < 0) {
+ printf("The number is negative.\n");
+ } else {
+ printf("The number is zero.\n");
+ }
+ return 0;
+}
+
+
+
+
+
+
+
+Experiment 22
+Swapping two numbers with a temporary variable
+
+
+
+
+#include <stdio.h>
+int main() {
+ int num1, num2, temp;
+ printf("Enter two numbers: ");
+ scanf("%d %d", &num1, &num2);
+ printf("Before swapping: num1 = %d, num2 = %d\n", num1, num2);
+ // Swapping using a temporary variable
+ temp = num1;
+ num1 = num2;
+ num2 = temp;
+ printf("After swapping: num1 = %d, num2 = %d\n", num1, num2);
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+Experiment 23
+Swapping two numbers without a temporary variable
+
+
+
+#include <stdio.h>
+int main() {
+ int num1, num2;
+ printf("Enter two numbers: ");
+ scanf("%d %d", &num1, &num2);
+ printf("Before swapping: num1 = %d, num2 = %d\n", num1, num2);
+ // Swapping without a temporary variable
+ num1 = num1 ^ num2;
+ num2 = num1 ^ num2;
+ num1 = num1 ^ num2;
+ printf("After swapping: num1 = %d, num2 = %d\n", num1, num2);
+ return 0;
+}
+
+
+
+
+
+
+
+
+Experiment 24
+Swap 3 numbers a to b, b to c and c to a
+
+
+
+#include <stdio.h>
+int main() {
+ int a, b, c, temp;
+ // Read values of a, b, and c
+ printf("Enter the values of a, b, and c: ");
+ scanf("%d %d %d", &a, &b, &c);
+ // Print original values
+ printf("Original values: a = %d, b = %d, c = %d\n", a, b, c);
+ // Swap values
+ temp = a;
+ a = b;
+ b = c;
+ c = temp;
+ // Print swapped values
+ printf("Swapped values: a = %d, b = %d, c = %d\n", a, b, c);
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+Experiment 25
+Finding the biggest out of 2 integer numbers
+
+
+
+#include <stdio.h>
+int main() {
+ int num1, num2, max;
+ // Read values of num1 and num2
+ printf("Enter the values of num1 and num2: ");
+ scanf("%d %d", &num1, &num2);
+ // Print original values
+ printf("Original values: num1 = %d, num2 = %d\n", num1, num2);
+ // Find the biggest number
+ if (num1 > num2) {
+ max = num1;
+ } else {
+ max = num2;
+ }
+ // Print the biggest number
+ printf("The biggest number is: %d\n", max);
+ return 0;
+}
+
+
+
+
+
+
+
+
+Experiment 26
+Finding the biggest out of n integer
+
+
+
+
+#include <stdio.h>
+int main() {
+ int n, i, num, max;
+ // Read the value of n
+ printf("Enter the value of n: ");
+ scanf("%d", &n);
+ // Read the first integer
+ printf("Enter integer 1: ");
+ scanf("%d", &max);
+ // Read the remaining integers and find the biggest
+ for (i = 2; i <= n; i++) {
+ printf("Enter integer %d: ", i);
+ scanf("%d", &num);
+ if (num > max) {
+ max = num;
+ }
+ }
+ // Print the biggest number
+ printf("The biggest number is: %d\n", max);
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+Experiment 27
+Sine series [sin(x) = x - x ^3 /3! + x^ 5 /5! – x^ 7 /7! . . . . . . 
+
+
+
+#include <stdio.h>
+#include <math.h>
+int factorial(int n) {
+ if (n == 0 || n == 1) {
+ return 1;
+ } else {
+ return n * factorial(n - 1);
+ }
+}
+int main() {
+ double x, sum = 0.0;
+ int n, sign = 1, i;
+ // Read the value of x
+ printf("Enter the value of x (in radians): ");
+ scanf("%lf", &x);
+ // Read the number of terms
+ printf("Enter the number of terms: ");
+ scanf("%d", &n);
+ // Calculate the sine series
+ for (i = 1; i <= n; i++) {
+ double term = sign * pow(x, (2 * i - 1)) / factorial(2 * i - 1);
+ sum += term;
+ sign = -sign;
+ }
+ // Print the result
+ printf("The value of sin(%lf) using %d terms is: %lf\n", x, n, sum);
+ return 0;
+}
+
+
+
+
+
+
+
+
+Experiment 28
+Cos series [cos(x) = 1 – x 2
+/2! + x 4
+/4! – x 6
+/6! . . . . . . 
+
+
+
+#include <stdio.h>
+#include <math.h>
+int main() {
+ double x, sum = 1.0, term = 1.0;
+ int n, sign = -1, fact = 2, i;
+ // Read the value of x
+ printf("Enter the value of x (in radians): ");
+ scanf("%lf", &x);
+ // Read the number of terms
+ printf("Enter the number of terms: ");
+ scanf("%d", &n);
+ // Calculate the cosine series
+ for (i = 1; i <= n; i++) {
+ term *= sign * x * x / (fact * (fact - 1));
+ sum += term;
+ sign = -sign;
+ fact += 2;
+ }
+ // Print the result
+ printf("The value of cos(%lf) using %d terms is: %lf\n", x, n, sum);
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+
+Experiment 29
+Exponential series [e -1 = 1 – x/1! + x 2
+/2! – x 3 /3! + x4
+/4! . . . . . . ]
+
+
+
+
+#include <stdio.h>
+double calculateExponentialSeries(double x, int n) {
+ double sum = 1.0, term = 1.0;
+ int i, fact = 1;
+ // Calculate the exponential series
+ for (i = 1; i <= n; i++) {
+ term *= (-1) * x / fact;
+ sum += term;
+ fact++;
+ }
+ return sum;
+}
+int main() {
+ double x;
+ int n;
+ // Read the value of x
+ printf("Enter the value of x: ");
+ scanf("%lf", &x);
+ // Read the number of terms
+ printf("Enter the number of terms: ");
+ scanf("%d", &n);
+ // Calculate and print the result
+ double result = calculateExponentialSeries(x, n);
+ printf("The value of e^(-%lf) using %d terms is: %lf\n", x, n, result);
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+Experiment 30
+Linear Search
+
+
+
+#include <stdio.h>
+int linearSearch(int arr[], int n, int key) {
+ int i;
+ for (i = 0; i < n; i++) {
+ if (arr[i] == key) {
+ return i;
+ }
+ }
+ return -1;
+}
+int main() {
+ int n, i, key;
+ // Read the number of elements in the array
+ printf("Enter the number of elements: ");
+ scanf("%d", &n);
+ int arr[n];
+ // Read the elements of the array
+ printf("Enter the elements of the array:\n");
+ for (i = 0; i < n; i++) {
+ scanf("%d", &arr[i]);
+ }
+ // Read the element to be searched
+ printf("Enter the element to search: ");
+ scanf("%d", &key);
+ // Perform linear search
+ int index = linearSearch(arr, n, key);
+ // Check if the element was found
+ if (index != -1) {
+ printf("Element found at index %d\n", index);
+ } else {
+ printf("Element not found\n");
+ }
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+Experiment 31
+Calculate the water bill given the cubic feet of water used for Eureka Water 
+Company, which charges the homeowner one of the following:
+a. A flat rate of $15.00 for usage up to and including 1000 cubic feet.
+b. $0.0175 per cubic foot for usage over 1000 cubic feet and up to and including 2000 
+cubic feet.
+c. $0.02 per cubic foot for usage over 2000 cubic feet and up to and including 3000
+cubic feet.
+d. A flat rate of $70.00 for usage over 3000 cubic feet.
+Write the algorithm, draw the flowchart and write pseudocode to test the above 
+problem
+
+
+
+
+
+
+
+#include <stdio.h>
+float calculateWaterBill(int usage) {
+ float bill = 0.0;
+ if (usage <= 1000) {
+ bill = 15.0;
+ } else if (usage > 1000 && usage <= 2000) {
+ int extraUsage = usage - 1000;
+ float extraCost = extraUsage * 0.0175;
+ bill = 15.0 + extraCost;
+ } else if (usage > 2000 && usage <= 3000) {
+ int extraUsage = usage - 2000;
+ float extraCost = extraUsage * 0.02;
+ bill = 15.0 + 0.0175 * 1000 + extraCost;
+ } else if (usage > 3000) {
+ int extraUsage = usage - 3000;
+ float extraCost = extraUsage * 0.02;
+ bill = 15.0 + 0.0175 * 1000 + 0.02 * 1000 + extraCost;
+ }
+ return bill;
+}
+int main() {
+ int usage;
+ printf("Enter the cubic feet of water used: ");
+ scanf("%d", &usage);
+ float bill = calculateWaterBill(usage);
+ printf("Water bill: $%.2f\n", bill);
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+Experiment 32
+A company that issues check-cashing cards uses an algorithm to create card numbers.
+The algorithm adds the digits of a four-digit number, and then adds a fifth digit of 0 or 
+1 to make the sum of the digits even. The last digit in the number is called the check 
+digit. Complete the seven problem-solving steps to develop a solution that accepts a 
+four-digit number into one variable, adds the check digit, and prints the original 
+number and the new number. Test your algorithm, flowchart and pseudocode with the 
+following data: Original (47371) and 4631 (46310).
+Hint: You may use any or all of these functions and the principle of concatenation
+of strings.
+Integer(X)—Integer function
+String(X)—Numeric to string
+Value(A)—String to numeric
+Note: The Integer(X) gives the whole number value of the real number X. When X is 
+546.43, the Integer(X) is 546; when X is 23.899 the Integer(X) is 23. The String(X) 
+and Value(A) are conversion functions. The resultant of the function String(X) is the 
+string value of the numeric X. The resultant of Value(A) is the numeric value of the 
+string A. Concatenation is the combining of strings by placing the first string in front 
+of the second one. For example, the resultant of would be “45.”
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+ int num, sum, checkDigit;
+ char cardNumber[6];
+ printf("Enter a four-digit number: ");
+ scanf("%d", &num);
+ // Calculate sum of digits
+ sum = (num % 10) + ((num / 10) % 10) + ((num / 100) % 10) + ((num / 1000) % 10);
+ // Check if sum is even or odd and set check digit
+ if (sum % 2 == 0) {
+ checkDigit = 0;
+ } else {
+ checkDigit = 1;
+ }
+ // Concatenate check digit with the four-digit number
+ sprintf(cardNumber, "%d%d", num, checkDigit);
+ printf("Original Number: %d\n", num);
+ printf("New Number: %s\n", cardNumber);
+ return 0;
+}
+
+
+
+
+
+
+
+
+Experiment 33
+An admission charge for The Little Rep Theatre varies according to the age of the
+person. Develop a solution to print the ticket charge given the age of the person.
+The charges are as follows:
+a. Over 55: $10.00
+b. 21–54: $15.00
+c. 13–20: $10.00
+d. 3–12: $5.00
+e. Under 3: Free
+
+
+
+
+
+#include <stdio.h>
+int main() {
+ int age;
+ float ticketCharge;
+ printf("Enter the age of the person: ");
+ scanf("%d", &age);
+ if (age > 55) {
+ ticketCharge = 10.00;
+ } else if (age >= 21 && age <= 54) {
+ ticketCharge = 15.00;
+ } else if (age >= 13 && age <= 20) {
+ ticketCharge = 10.00;
+ } else if (age >= 3 && age <= 12) {
+ ticketCharge = 5.00;
+ } else {
+ ticketCharge = 0.00;
+ }
+ printf("Ticket Charge: $%.2f\n", ticketCharge);
+ return 0;
+}
+
+
+
+
+
+
+Experiment 34
+A hotel has a pricing policy as follows:
+a. 2 people: $85
+b. 3 people: $90
+c. 4 people: $95
+d. Additional people: $6 per person
+If the customer is staying on company business, there is a 20% discount. If the customer is 
+over 60 years of age, there is a 15% discount. A customer does not receive both discounts. 
+Given the above data, print the cost of the room
+
+
+
+
+#include <stdio.h>
+int main() {
+ int numPeople;
+ int isCompanyBusiness;
+ int isOver60;
+ int basePrice;
+ double discount;
+ double totalCost;
+ printf("Enter the number of people: ");
+ scanf("%d", &numPeople);
+ printf("Is the customer staying on company business? (0 for No, 1 for Yes): ");
+ scanf("%d", &isCompanyBusiness);
+ printf("Is the customer over 60 years of age? (0 for No, 1 for Yes): ");
+ scanf("%d", &isOver60);
+ if (numPeople == 2)
+ basePrice = 85;
+ else if (numPeople == 3)
+ basePrice = 90;
+ else if (numPeople == 4)
+ basePrice = 95;
+ else
+ basePrice = 95 + (6 * (numPeople - 4));
+ if (isCompanyBusiness)
+ discount = 0.2 * basePrice;
+ else if (isOver60)
+ discount = 0.15 * basePrice;
+ else
+ discount = 0;
+ totalCost = basePrice - discount;
+ printf("Cost of the room: $%.2f\n", totalCost);
+ return 0;
+}
+
+
+
+
+
+
+
+
+Experiment 35
+A student wants to know his grade point average for the semester. The grades are given 
+in letter grades with numeric equivalents. Develop a solution to calculate a grade point 
+average given the letter grades. (Remember, the grade point average is figured per unit of 
+credit, not per course.) An A = 4.0, B = 3.0, C = 2.0, D = 1.0, F = 0.0. Write the 
+algorithm to test the solution with the following data and draw flowchart and write 
+pseudocode:
+History B 3 units
+Economics A 3 units
+PE A 1 unit
+Chemistry C 4 units
+Art B 3 units
+(Hint: Use a trip value to stop the processing of the loop and a case structure to find
+the grade points.)
+
+
+
+#include <stdio.h>
+int main() {
+ int totalCredits = 0;
+ float totalGradePoints = 0;
+ int credit;
+ char grade;
+ printf("Enter the credit and grade for each course (enter 0 for credit to stop):\n");
+ while (1) {
+ printf("Credit: ");
+ scanf("%d", &credit);
+ if (credit == 0) {
+ break;
+ }
+ printf("Grade: ");
+ scanf(" %c", &grade);
+ switch (grade) {
+ case 'A':
+ totalGradePoints += credit * 4.0;
+ break;
+ case 'B':
+ totalGradePoints += credit * 3.0;
+ break;
+ case 'C':
+ totalGradePoints += credit * 2.0;
+ break;
+ case 'D':
+ totalGradePoints += credit * 1.0;
+ break;
+ case 'F':
+ totalGradePoints += credit * 0.0;
+ break;
+ default:
+ printf("Invalid grade entered.\n");
+ continue;
+ }
+ totalCredits += credit;
+ }
+ if (totalCredits == 0) {
+ printf("No courses entered.\n");
+ } else {
+ float gpa = totalGradePoints / totalCredits;
+ printf("GPA: %.2f\n", gpa);
+ }
+ return 0;
+}
+
+
+
+
+
+
+
+Experiment 36
+Mr. Johnson would like to know how many As, Bs, Cs, Ds, and Fs his students received on a test. He has 200 
+students who took the test. He would like to enter the student number and the number grade for the test for 
+each student. Develop the solution to print out each student’s student number, number grade, letter grade, 
+and the total number of As, Bs, Cs, Ds, and Fs. His grading scale is as follows: 90–100 is an A, 78–89 is a B, 65–
+77 is a C, 50–64 is a D, and below 50 is an F. Write the algorithm, draw the flowchart and write pseudocode to 
+test the above problem.
+
+
+
+
+#include <stdio.h>
+int main() {
+ int numStudents = 200;
+ int numAs = 0, numBs = 0, numCs = 0, numDs = 0, numFs = 0;
+ printf("Enter the student number and number grade for each student:\n");
+ for (int i = 1; i <= numStudents; i++) {
+ int studentNumber, numberGrade;
+ printf("Student %d\n", i);
+ printf("Student Number: ");
+ scanf("%d", &studentNumber);
+ printf("Number Grade: ");
+ scanf("%d", &numberGrade);
+ if (numberGrade >= 90 && numberGrade <= 100) {
+ numAs++;
+ } else if (numberGrade >= 78 && numberGrade <= 89) {
+ numBs++;
+ } else if (numberGrade >= 65 && numberGrade <= 77) {
+ numCs++;
+ } else if (numberGrade >= 50 && numberGrade <= 64) {
+ numDs++;
+ } else if (numberGrade < 50) {
+ numFs++;
+ }
+ }
+ printf("Grade Summary:\n");
+ printf("A: %d\n", numAs);
+ printf("B: %d\n", numBs);
+ printf("C: %d\n", numCs);
+ printf("D: %d\n", numDs);
+ printf("F: %d\n", numFs);
+ return 0;
+}
+
+
+
+
+
+
+
+Experiment 37
+John Smith is a new car salesperson. Write the algorithm and a program to calculate the total cost of a car given 
+the following. initial price of the car 0 to 10 accessories (the computer would select the price according to the 
+accessory) sales ta
+
+
+
+
+#include <stdio.h>
+int main() {
+ float initialPrice, accessoryPrice, salesTaxRate, totalCost = 0;
+ int numAccessories;
+ printf("Enter the initial price of the car: ");
+ scanf("%f", &initialPrice);
+ printf("Enter the number of accessories: ");
+ scanf("%d", &numAccessories);
+ for (int i = 1; i <= numAccessories; i++) {
+ printf("Enter the price of accessory %d: ", i);
+ scanf("%f", &accessoryPrice);
+ totalCost += accessoryPrice;
+ }
+ printf("Enter the sales tax rate: ");
+ scanf("%f", &salesTaxRate);
+ float salesTaxAmount = (salesTaxRate / 100) * (initialPrice + totalCost);
+ totalCost = initialPrice + totalCost + salesTaxAmount;
+ printf("Total cost of the car: $%.2f\n", totalCost);
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+Experiment 38
+The Last Stop Boutique is having a five-day sale. Each day, starting on Monday, the price will drop 10% of the 
+previous day’s price. For example, if the original price of a product is $20.00, the sale price on Monday would 
+be $18.00 (10% less than the original price). On Tuesday the sale price would be $16.20 (10% less than 
+Monday). On Wednesday the sale price would be $14.58; on Thursday the sale price would be $13.12; and on 
+Friday the sale price would be $11.81. Develop a solution that will calculate the price of an item for each of the 
+five days, given the original price. Write the algorithm, flowchart and pseudocode to test the solution
+
+
+
+
+#include <stdio.h>
+int main() {
+ float originalPrice, salePrice;
+ printf("Enter the original price of the item: ");
+ scanf("%f", &originalPrice);
+ salePrice = originalPrice;
+ for (int day = 1; day <= 5; day++) {
+ printf("Sale price on day %d: $%.2f\n", day, salePrice);
+ salePrice = salePrice - (0.1 * salePrice);
+ }
+ return 0;
+}
+
+
+
+
+
+
+
+Experiment 39
+Mary Smith, a student, has borrowed $3,000 to help pay her college expenses. After setting up a budget, $85 
+was the maximum monthly payment she could afford to make on the loan. Develop a solution to calculate and 
+print the interest, the principal, and the balance on the loan per month. Other information she would like to 
+know is the number of years and months it will take to pay the loan back and the total interest she will pay 
+during that period. The interest rate is 1% per month on the unpaid balance. Write the algorithm, flowchart 
+and pseudocode to test the solution.
+
+
+
+
+#include <stdio.h>
+int main() {
+ float loanAmount = 3000;
+ float monthlyPayment = 85;
+ float interestRate = 0.01;
+ float balance = loanAmount;
+ float totalInterest = 0;
+ int numYears, numMonths;
+ numYears = loanAmount / (12 * monthlyPayment);
+ numMonths = loanAmount % (12 * monthlyPayment);
+ while (balance > 0) {
+ float interest = interestRate * balance;
+ float principal = monthlyPayment - interest;
+ balance = balance - principal;
+ totalInterest = totalInterest + interest;
+ printf("Interest: $%.2f, Principal: $%.2f, Balance: $%.2f\n", interest, principal, balance);
+ }
+ printf("Number of years: %d, Number of months: %d\n", numYears, numMonths);
+ printf("Total interest paid: $%.2f\n", totalInterest);
+ return 0;
+}
+
+
+
+
+
+
+
+
+Experiment 40
+Write a solution (algorithm, flowchart and program ) to find the average miles per gallon on a car after six 
+fillups at a gas station. Additional data kept included the number of gallons of gas at each fillup, the starting
+odometer reading, and the odometer reading at each fillup.
+
+
+
+
+
+#include <stdio.h>
+int main() {
+ int totalMiles = 0, totalGallons = 0, odometerReading, previousOdometerReading = 0;
+ double averageMPG;
+ for (int i = 1; i <= 6; i++) {
+ int gallons;
+ printf("Fillup %d\n", i);
+ printf("Enter gallons of gas: ");
+ scanf("%d", &gallons);
+ int currentOdometerReading;
+ printf("Enter odometer reading: ");
+ scanf("%d", &currentOdometerReading);
+ int milesDriven = currentOdometerReading - previousOdometerReading;
+ totalMiles += milesDriven;
+ totalGallons += gallons;
+ previousOdometerReading = currentOdometerReading;
+ }
+ averageMPG = (double) totalMiles / totalGallons;
+ printf("\nAverage MPG: %.2f\n", averageMPG);
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
